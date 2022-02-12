@@ -43,9 +43,14 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
+    odm \
+    product \
     system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
     vendor \
-    vbmeta
+    vendor_boot
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -150,9 +155,9 @@ PRODUCT_COPY_FILES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl:64 \
-    android.hardware.boot@1.0-service \
-    android.hardware.boot@1.0-impl.recovery \
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service \
     bootctrl.qcom \
     bootctrl.qcom.recovery
 
